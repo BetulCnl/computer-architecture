@@ -28,6 +28,11 @@ export function Sidebar() {
 
   if (inTour) return null;
 
+  // Dar ekranda kenar çubuğu içeriğin üzerine açılır; seçim yapılınca kapat.
+  const closeIfOverlay = () => {
+    if (window.matchMedia('(max-width: 900px)').matches) toggleSidebar();
+  };
+
   return (
     <>
       <button
@@ -52,7 +57,10 @@ export function Sidebar() {
                 <button
                   type="button"
                   className={`sidebar-item${view === 'lab' && activeComponent === c.id ? ' active' : ''}`}
-                  onClick={() => openLab(c.id)}
+                  onClick={() => {
+                    openLab(c.id);
+                    closeIfOverlay();
+                  }}
                 >
                   {c.label}
                 </button>
@@ -71,7 +79,10 @@ export function Sidebar() {
                   className={`sidebar-item lesson${
                     view === 'lesson' && activeLessonId === entry.id ? ' active' : ''
                   }${entry.ready ? '' : ' draft'}`}
-                  onClick={() => openLesson(entry.id)}
+                  onClick={() => {
+                    openLesson(entry.id);
+                    closeIfOverlay();
+                  }}
                   title={entry.ready ? entry.title : `${entry.title} — içerik hazırlanıyor`}
                 >
                   <span className="lesson-no">{String(entry.order).padStart(2, '0')}</span>

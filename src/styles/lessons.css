@@ -887,3 +887,65 @@
   justify-content: center;
   gap: 14px;
 }
+
+/* ---- mobil ---------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .lesson-hero {
+    min-height: 32vh;
+    margin-bottom: 34px;
+  }
+
+  .lesson-heading {
+    margin: 44px 0 8px;
+  }
+
+  /* Diyagramlar daralıp okunmaz olmasın: kutu içinde yatay kaydırma */
+  .viz-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .viz-body svg {
+    min-width: 540px;
+  }
+
+  .viz-controls {
+    padding: 8px 10px;
+  }
+
+  .viz-modes {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .viz-modes::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lesson-model-head {
+    flex-wrap: wrap;
+  }
+
+  .lesson-model-canvas {
+    height: clamp(220px, 36vh, 320px);
+  }
+
+  .quiz {
+    padding: 16px 14px;
+  }
+
+  .lesson-pager {
+    flex-direction: column;
+    margin-top: 48px;
+  }
+
+  .lesson-pager-btn {
+    max-width: 100%;
+  }
+
+  .lesson-pager-btn.next {
+    margin-left: 0;
+  }
+}
