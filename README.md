@@ -1,5 +1,7 @@
 # PcRL — Interactive 3D Hardware Lab
 
+**🌐 Canlı site: [betulcnl.github.io/computer-architecture](https://betulcnl.github.io/computer-architecture/)**
+
 A production-grade, interactive 3D education platform for PC hardware. Every model — CPU, GPU, DDR5 RAM, NVMe SSD, ATX motherboard, tower cooler — is **generated procedurally in Three.js**: no GLB/FBX files, no downloaded assets, no external HDRIs. The entire experience ships as a static SPA.
 
 ## Features

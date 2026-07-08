@@ -52,6 +52,9 @@ function dersNotlariManifest(): Plugin {
 }
 
 export default defineConfig({
+  // GitHub Pages, siteyi https://<kullanıcı>.github.io/computer-architecture/
+  // altından sunar; üretim derlemesinde tüm asset yolları bu köke göre çözülür.
+  base: process.env.GITHUB_ACTIONS ? '/computer-architecture/' : '/',
   plugins: [react(), dersNotlariManifest()],
   resolve: {
     alias: {
