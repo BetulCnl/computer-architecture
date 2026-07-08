@@ -41,10 +41,7 @@ export function Sidebar() {
       </button>
       <nav className={`sidebar${sidebarOpen ? ' open' : ''}`} aria-label="Ana gezinme">
         <div className="sidebar-brand">
-          <span className="brand-name">
-            Pc<em>RL</em>
-          </span>
-          <span className="brand-tag">İnteraktif Donanım ve Mimari</span>
+          <span className="brand-name">bc</span>
         </div>
 
         <div className="sidebar-section">

@@ -33,15 +33,7 @@ export function Hud() {
     <div className="hud">
       <div className="hud-top">
         <div className="brand">
-          <span className="brand-name">
-            Pc<em>RL</em>
-          </span>
-          <span className="brand-tag">İnteraktif Donanım Laboratuvarı</span>
-          {!inTour && (
-            <span className="hint">
-              Sürükleyerek döndür · parçaya tıkla · E patlat · Boşluk simülasyon
-            </span>
-          )}
+          <span className="brand-name">bc</span>
         </div>
         {!inTour && (
           <nav className="switcher" aria-label="Bileşen seçici">
@@ -67,13 +59,11 @@ export function Hud() {
         <div className="hud-bottom">
           <div className="panel controls-panel">
             <div className="control-group">
-              <label className="control-label" htmlFor="explode">
-                Patlatılmış görünüm
-              </label>
               <input
                 id="explode"
                 className="slider"
                 type="range"
+                aria-label="Patlatılmış görünüm"
                 min={0}
                 max={1}
                 step={0.01}
