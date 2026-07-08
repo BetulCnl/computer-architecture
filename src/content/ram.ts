@@ -2,33 +2,33 @@ import type { PartContent } from '@/content/cpu';
 
 export const ramContent: Record<string, PartContent> = {
   'ram.spreader': {
-    title: 'Heatspreader',
-    summary: 'Aluminum shell that cools the memory chips — and looks good doing it.',
+    title: 'Isı Dağıtıcı Kapak',
+    summary: 'Bellek yongalarını soğutan — ve bunu şık yapan — alüminyum kabuk.',
     details:
-      'DDR5 modules draw more power than previous generations, and the on-module power circuitry adds extra heat. The aluminum shell wicks warmth away from the DRAM packages and spreads it into the case airflow. On many consumer modules it also doubles as styling and RGB mounting.',
+      'DDR5 modülleri önceki nesillerden daha fazla güç çeker; modül üzerindeki güç devresi de ekstra ısı ekler. Alüminyum kabuk, DRAM paketlerinden ısıyı çekip kasa içi hava akımına yayar. Birçok tüketici modülünde aynı zamanda tasarım öğesi ve RGB taşıyıcısıdır.',
   },
   'ram.chips': {
-    title: 'DRAM Packages',
-    summary: 'The chips that store your running programs — billions of tiny capacitors.',
+    title: 'DRAM Paketleri',
+    summary: 'Çalışan programlarınızı tutan yongalar — milyarlarca minik kondansatör.',
     details:
-      'Each package contains DRAM dies where every bit is a microscopic capacitor that leaks its charge in milliseconds. The memory controller must refresh every cell thousands of times per second — that is why RAM forgets everything when power is cut. Chips on both faces double the module capacity.',
+      'Her pakette, her bitin milisaniyeler içinde yükünü kaçıran mikroskobik bir kondansatör olduğu DRAM çekirdekleri bulunur. Bellek denetçisi her hücreyi saniyede binlerce kez tazelemek zorundadır — RAM’in güç kesilince her şeyi unutmasının nedeni budur. İki yüzdeki yongalar modül kapasitesini ikiye katlar.',
   },
   'ram.pmic': {
-    title: 'Power Management IC (PMIC)',
-    summary: 'DDR5 moved voltage regulation from the motherboard onto the module itself.',
+    title: 'Güç Yönetim Yongası (PMIC)',
+    summary: 'DDR5, gerilim düzenlemesini anakarttan modülün üzerine taşıdı.',
     details:
-      'This is the defining change of DDR5: a PMIC on each module converts the 5 V input into the precise low voltages the DRAM needs. Local regulation means cleaner power, better signal integrity at high speeds, and per-module control that motherboards could never achieve.',
+      'DDR5’in tanımlayıcı değişikliği budur: her modüldeki PMIC, 5 V girişi DRAM’in gereksindiği hassas düşük gerilimlere dönüştürür. Yerel düzenleme daha temiz güç, yüksek hızlarda daha iyi sinyal bütünlüğü ve anakartların asla sunamayacağı modül başına denetim demektir.',
   },
   'ram.pcb': {
-    title: 'Module PCB',
-    summary: 'A precision-routed board where every trace length is matched.',
+    title: 'Modül PCB’si',
+    summary: 'Her iletken yolun uzunluğu eşlenmiş, hassas tasarlanmış bir kart.',
     details:
-      'At DDR5 speeds, signals travel so fast that a few millimeters of extra trace length would skew data timing. The PCB routes every data line with matched lengths — the wiggly traces on real modules are deliberate delay-matching, not decoration.',
+      'DDR5 hızlarında sinyaller öyle hızlı ilerler ki birkaç milimetre fazla yol, veri zamanlamasını kaydırır. PCB her veri hattını eşlenmiş uzunluklarla yönlendirir — gerçek modüllerdeki kıvrımlı yollar süsleme değil, bilinçli gecikme eşlemesidir.',
   },
   'ram.contacts': {
-    title: 'Edge Connector',
-    summary: '288 gold-plated fingers carrying data at billions of transfers per second.',
+    title: 'Kenar Konnektörü',
+    summary: 'Saniyede milyarlarca aktarım taşıyan 288 altın kaplama parmak.',
     details:
-      'The module edge plugs directly into the DIMM slot. DDR5 keeps 288 pins but re-arranges them into two independent 32-bit channels per module. The off-center notch prevents inserting the module backwards or into a DDR4 slot.',
+      'Modülün kenarı doğrudan DIMM yuvasına takılır. DDR5, 288 pini korur ama onları modül başına iki bağımsız 32 bitlik kanala yeniden düzenler. Ortadan kaçık çentik, modülün ters ya da bir DDR4 yuvasına takılmasını önler.',
   },
 };

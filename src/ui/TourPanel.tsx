@@ -36,7 +36,7 @@ export function TourPanel() {
           <button
             key={c.id}
             type="button"
-            aria-label={`Chapter ${i + 1}`}
+            aria-label={`Bölüm ${i + 1}`}
             className={`tour-dot${i === tourIndex ? ' active' : ''}`}
             onClick={() => setTourIndex(i)}
           />
@@ -46,7 +46,7 @@ export function TourPanel() {
       <p className="tour-body">{chapter.body}</p>
       <div className="tour-nav">
         <button type="button" className="tour-btn ghost" onClick={exitTour}>
-          Exit tour
+          Turdan çık
         </button>
         <div className="tour-nav-right">
           <button
@@ -55,14 +55,14 @@ export function TourPanel() {
             disabled={isFirst}
             onClick={() => setTourIndex(tourIndex - 1)}
           >
-            ← Back
+            ← Geri
           </button>
           <button
             type="button"
             className="tour-btn primary"
             onClick={() => (isLast ? exitTour() : setTourIndex(tourIndex + 1))}
           >
-            {isLast ? 'Finish' : 'Next →'}
+            {isLast ? 'Bitir' : 'Sonraki →'}
           </button>
         </div>
       </div>

@@ -2,27 +2,27 @@ import type { PartContent } from '@/content/cpu';
 
 export const coolerContent: Record<string, PartContent> = {
   'cooler.base': {
-    title: 'Cold Plate',
-    summary: 'Polished copper that presses directly against the CPU.',
+    title: 'Soğuk Plaka',
+    summary: 'İşlemciye doğrudan bastıran parlatılmış bakır taban.',
     details:
-      'The copper base is machined flat to fractions of a millimeter and clamps onto the CPU heat spreader with thermal paste in between. Copper is used here because it conducts heat almost twice as well as aluminum — the heat must enter the cooler as fast as possible.',
+      'Bakır taban milimetrenin kesirleri hassasiyetinde düz işlenir ve arada termal macunla işlemcinin ısı dağıtıcısına kenetlenir. Burada bakır kullanılır, çünkü ısıyı alüminyumdan neredeyse iki kat iyi iletir — ısı soğutucuya olabildiğince hızlı girmelidir.',
   },
   'cooler.pipes': {
-    title: 'Heatpipes',
-    summary: 'Sealed copper tubes that move heat using evaporating liquid.',
+    title: 'Isı Boruları',
+    summary: 'Buharlaşan sıvıyla ısı taşıyan kapalı bakır tüpler.',
     details:
-      'Each pipe contains a small amount of fluid in a vacuum. At the hot base it evaporates, races up the pipe as vapor, condenses at the cool end and returns through a capillary wick — a self-pumping cycle with no moving parts that transfers heat far better than solid metal.',
+      'Her boru, vakum içinde az miktarda sıvı barındırır. Sıcak tabanda buharlaşır, buhar olarak boruda yukarı koşar, serin uçta yoğuşur ve kılcal fitil boyunca geri döner — hareketli parçasız, kendi kendini pompalayan ve ısıyı katı metalden çok daha iyi taşıyan bir çevrim.',
   },
   'cooler.fins': {
-    title: 'Fin Stack',
-    summary: 'Dozens of aluminum fins turn the tower into a huge radiator.',
+    title: 'Kanatçık Yığını',
+    summary: 'Onlarca alüminyum kanatçık, kuleyi dev bir radyatöre dönüştürür.',
     details:
-      'The fins exist to maximize surface area — unfolded, this stack would cover square meters. Heat spreads from the heatpipes into each fin, and the fan pushes air between them to carry it away. Fin spacing is a tuned compromise between surface area and airflow resistance.',
+      'Kanatçıkların varlık nedeni yüzey alanını en üst düzeye çıkarmaktır — açılsa bu yığın metrekarelerce yer kaplar. Isı, ısı borularından her kanatçığa yayılır; fan aralarından hava geçirip onu süpürür. Kanatçık aralığı, yüzey alanı ile hava direnci arasında ayarlanmış bir uzlaşmadır.',
   },
   'cooler.fan': {
-    title: 'Cooling Fan',
-    summary: 'Pushes a steady stream of air through the fin stack.',
+    title: 'Soğutma Fanı',
+    summary: 'Kanatçık yığınından sürekli bir hava akımı geçirir.',
     details:
-      'The fan creates the pressure difference that forces air between the fins. Blade shape, count and pitch are engineered to move maximum air at minimum noise, and PWM control lets the motherboard spin it anywhere from silent idle to full blast under load.',
+      'Fan, havayı kanatçıkların arasına zorlayan basınç farkını yaratır. Kanat biçimi, sayısı ve açısı en az gürültüyle en çok havayı taşıyacak şekilde tasarlanır; PWM denetimi sayesinde anakart onu sessiz rölantiden yük altındaki tam güce kadar her hızda döndürebilir.',
   },
 };

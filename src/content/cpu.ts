@@ -11,39 +11,39 @@ export interface PartContent {
 
 export const cpuContent: Record<string, PartContent> = {
   'cpu.ihs': {
-    title: 'Integrated Heat Spreader (IHS)',
-    summary: 'The nickel-plated copper lid that protects the die and spreads heat.',
+    title: 'Tümleşik Isı Dağıtıcı (IHS)',
+    summary: 'Çekirdeği koruyan ve ısıyı yayan nikel kaplı bakır kapak.',
     details:
-      'The IHS distributes the intense, concentrated heat of the silicon die across a larger surface so the cooler can absorb it. It also physically protects the fragile die from mounting pressure. On modern CPUs it is soldered to the die with indium for better thermal transfer.',
+      'IHS, silisyum çekirdeğin (die) yoğun ve noktasal ısısını daha geniş bir yüzeye dağıtır; böylece soğutucu bu ısıyı emebilir. Ayrıca kırılgan çekirdeği montaj basıncından fiziksel olarak korur. Modern işlemcilerde daha iyi ısı iletimi için çekirdeğe indiyumla lehimlenir.',
   },
   'cpu.paste': {
-    title: 'Thermal Interface Material (TIM)',
-    summary: 'Fills microscopic gaps between the die and the heat spreader.',
+    title: 'Termal Arayüz Malzemesi (TIM)',
+    summary: 'Çekirdek ile ısı dağıtıcı arasındaki mikroskobik boşlukları doldurur.',
     details:
-      'Even polished metal surfaces have microscopic valleys that trap insulating air. TIM — solder or thermal paste — fills those gaps so heat can flow efficiently from the die into the IHS. Without it, a modern CPU would overheat in seconds.',
+      'Parlatılmış metal yüzeylerde bile yalıtkan hava hapseden mikroskobik girintiler vardır. TIM — lehim ya da termal macun — bu boşlukları doldurur ve ısının çekirdekten IHS’ye verimli akmasını sağlar. O olmasaydı modern bir işlemci saniyeler içinde aşırı ısınırdı.',
   },
   'cpu.die': {
-    title: 'Silicon Die',
-    summary: 'The actual processor: billions of transistors on a fingernail-sized chip.',
+    title: 'Silisyum Çekirdek (Die)',
+    summary: 'Asıl işlemci: tırnak boyutunda bir yongada milyarlarca transistör.',
     details:
-      'The die is cut from a silicon wafer and contains the CPU cores, cache memory and I/O logic — billions of transistors a few nanometers wide. The rainbow shimmer you see on real dies comes from light diffracting off the nanoscale circuit layers.',
+      'Çekirdek, bir silisyum plakadan (wafer) kesilir; işlemci çekirdeklerini, cep belleği ve G/Ç mantığını barındırır — her biri birkaç nanometre genişliğinde milyarlarca transistör. Gerçek çekirdeklerde görülen gökkuşağı parıltısı, ışığın nano ölçekli devre katmanlarında kırınımından gelir.',
   },
   'cpu.smds': {
-    title: 'SMD Capacitors',
-    summary: 'Tiny capacitors that smooth the power reaching the die.',
+    title: 'SMD Kondansatörler',
+    summary: 'Çekirdeğe ulaşan gücü düzleştiren minik kondansatörler.',
     details:
-      'A CPU switches billions of times per second, causing sharp spikes in current demand. These multilayer ceramic capacitors sit as close to the die as possible and act as microscopic power reservoirs, keeping the supply voltage stable.',
+      'Bir işlemci saniyede milyarlarca kez anahtarlama yapar ve akım talebinde keskin sıçramalara yol açar. Bu çok katmanlı seramik kondansatörler çekirdeğe olabildiğince yakın durur ve mikroskobik güç depoları gibi davranarak besleme gerilimini kararlı tutar.',
   },
   'cpu.substrate': {
-    title: 'Package Substrate',
-    summary: 'A miniature circuit board connecting the die to the motherboard.',
+    title: 'Paket Taşıyıcısı (Substrate)',
+    summary: 'Çekirdeği anakarta bağlayan minyatür bir devre kartı.',
     details:
-      'The substrate is a multi-layer PCB that fans out the die’s thousands of microscopic connections to the larger contact pads on the bottom. Signal and power routing through the substrate is engineered as carefully as the chip itself.',
+      'Taşıyıcı, çekirdeğin binlerce mikroskobik bağlantısını alttaki daha büyük temas yüzeylerine yayan çok katmanlı bir baskı devredir. İçindeki sinyal ve güç yolları en az yonganın kendisi kadar özenle tasarlanır.',
   },
   'cpu.pads': {
-    title: 'LGA Contact Pads',
-    summary: 'Gold-plated pads that mate with the spring pins in the socket.',
+    title: 'LGA Temas Yüzeyleri',
+    summary: 'Yuvadaki yaylı pimlerle buluşan altın kaplama temas noktaları.',
     details:
-      'In a Land Grid Array (LGA) package the pins live in the motherboard socket, and the CPU carries flat gold-plated pads — over a thousand of them. Gold is used because it does not oxidize, guaranteeing a reliable connection for years.',
+      'Land Grid Array (LGA) paketinde pimler anakart yuvasında bulunur; işlemcinin altında ise binden fazla düz, altın kaplama temas yüzeyi vardır. Altın oksitlenmediği için yıllarca güvenilir bağlantı garanti eder.',
   },
 };

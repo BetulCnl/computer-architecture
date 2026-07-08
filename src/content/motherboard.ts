@@ -2,69 +2,69 @@ import type { PartContent } from '@/content/cpu';
 
 export const motherboardContent: Record<string, PartContent> = {
   'mb.pcb': {
-    title: 'Motherboard PCB',
-    summary: 'The nervous system connecting every component.',
+    title: 'Anakart PCB’si',
+    summary: 'Tüm bileşenleri birbirine bağlayan sinir sistemi.',
     details:
-      'Six to eight copper layers route thousands of traces: high-speed PCIe and memory lanes, power planes and control signals. Every component in the PC ultimately communicates through this board — its layout quality decides how fast and stable the whole system can run.',
+      'Altı ila sekiz bakır katman, binlerce iletken yolu yönlendirir: yüksek hızlı PCIe ve bellek hatları, güç düzlemleri ve denetim sinyalleri. Bilgisayardaki her bileşen sonuçta bu kart üzerinden haberleşir — yerleşiminin kalitesi, tüm sistemin ne kadar hızlı ve kararlı çalışabileceğini belirler.',
   },
   'mb.socket': {
-    title: 'CPU Socket',
-    summary: 'Over a thousand spring pins that mate with the CPU’s pads.',
+    title: 'İşlemci Yuvası',
+    summary: 'İşlemcinin temas yüzeyleriyle buluşan binden fazla yaylı pim.',
     details:
-      'In an LGA socket, delicate spring-loaded pins live here rather than on the CPU. The retention frame presses the processor down with carefully calibrated force so every pin makes contact. One bent pin can disable a whole memory channel — hence the protective cover on new boards.',
+      'LGA yuvasında narin, yaylı pimler işlemcide değil buradadır. Sabitleme çerçevesi, her pimin temas etmesi için işlemciyi özenle ayarlanmış bir kuvvetle bastırır. Eğilen tek bir pim koca bir bellek kanalını devre dışı bırakabilir — yeni kartlardaki koruyucu kapağın nedeni budur.',
   },
   'mb.vrm': {
-    title: 'VRM Heatsinks',
-    summary: 'Cooling for the circuitry that feeds the CPU hundreds of amps.',
+    title: 'VRM Soğutucuları',
+    summary: 'İşlemciye yüzlerce amper besleyen devrenin soğutması.',
     details:
-      'Beneath these heatsinks, the voltage regulator module converts 12 V into the ~1 V the CPU needs — at enormous current. The MOSFETs doing that switching get hot enough to throttle without cooling; beefier VRM cooling is a genuine reason high-end boards cost more.',
+      'Bu soğutucuların altındaki gerilim düzenleme modülü, 12 V’u işlemcinin gereksindiği ~1 V’a dönüştürür — hem de devasa akımda. Bu anahtarlamayı yapan MOSFET’ler, soğutulmazsa hız düşürecek kadar ısınır; daha güçlü VRM soğutması, üst düzey anakartların pahalı olmasının gerçek nedenlerindendir.',
   },
   'mb.dimm': {
-    title: 'DDR5 DIMM Slots',
-    summary: 'Four channels of contact between CPU and memory.',
+    title: 'DDR5 DIMM Yuvaları',
+    summary: 'İşlemci ile bellek arasında dört kanallı temas.',
     details:
-      'Memory slots connect straight to the memory controller inside the CPU — the chipset is not involved. Slot pairs share channels, which is why the manual tells you exactly which slots to fill first: the right pairing enables dual-channel bandwidth.',
+      'Bellek yuvaları doğrudan işlemcinin içindeki bellek denetçisine bağlanır — yonga seti işin içinde değildir. Yuva çiftleri kanalları paylaşır; kılavuzun önce hangi yuvaların doldurulacağını söylemesinin nedeni budur: doğru eşleştirme çift kanal bant genişliğini açar.',
   },
   'mb.pcie': {
-    title: 'PCIe Slots',
-    summary: 'Expansion lanes for GPUs and add-in cards.',
+    title: 'PCIe Yuvaları',
+    summary: 'Ekran kartları ve genişleme kartları için şeritler.',
     details:
-      'The reinforced top slot usually wires ×16 lanes directly to the CPU for the graphics card; lower slots often route through the chipset. Each PCIe generation doubles per-lane speed, and slots are backwards compatible — an old card works in a new slot and vice versa.',
+      'Güçlendirilmiş üst yuva genellikle ×16 şeridi ekran kartı için doğrudan işlemciye bağlar; alttaki yuvalar çoğunlukla yonga seti üzerinden geçer. Her PCIe nesli şerit başına hızı ikiye katlar ve yuvalar geriye uyumludur — eski kart yeni yuvada çalışır, tersi de geçerlidir.',
   },
   'mb.chipset': {
-    title: 'Chipset',
-    summary: 'The CPU’s I/O deputy, hiding under this heatsink.',
+    title: 'Yonga Seti',
+    summary: 'İşlemcinin G/Ç yardımcısı — bu soğutucunun altında saklanır.',
     details:
-      'The chipset fans out connectivity the CPU doesn’t handle directly: extra PCIe lanes, SATA ports, USB, networking. It links to the CPU through a dedicated high-speed connection and quietly runs warm enough to need its own heatsink.',
+      'Yonga seti, işlemcinin doğrudan üstlenmediği bağlantıları dağıtır: ek PCIe şeritleri, SATA bağlantı noktaları, USB, ağ. İşlemciye özel bir yüksek hızlı bağlantıyla bağlanır ve kendi soğutucusuna gereksinecek kadar sessizce ısınır.',
   },
   'mb.m2': {
-    title: 'M.2 Slot & Shield',
-    summary: 'Where the NVMe SSD mounts flat against the board.',
+    title: 'M.2 Yuvası ve Zırhı',
+    summary: 'NVMe SSD’nin karta düz yattığı yer.',
     details:
-      'The M.2 slot delivers PCIe lanes to a drive screwed flat onto the board — no cables at all. The aluminum shield above it is a heatsink: fast NVMe drives can thermally throttle during long transfers without one.',
+      'M.2 yuvası, karta düz vidalanan sürücüye PCIe şeritleri ulaştırır — hiç kablo yoktur. Üzerindeki alüminyum zırh bir soğutucudur: hızlı NVMe sürücüler, o olmadan uzun aktarımlarda ısıdan hız düşürebilir.',
   },
   'mb.io': {
-    title: 'Rear I/O',
-    summary: 'The port cluster that faces out the back of the case.',
+    title: 'Arka G/Ç',
+    summary: 'Kasanın arkasından dışarı bakan bağlantı kümesi.',
     details:
-      'USB, networking, audio and display outputs gather at this edge, under a decorative shroud. The design goal is cable-free reach to the outside world while keeping all high-speed routing as short as possible to the CPU and chipset.',
+      'USB, ağ, ses ve görüntü çıkışları dekoratif bir kaportanın altında bu kenarda toplanır. Tasarım hedefi, dış dünyaya kablosuz erişim sunarken tüm yüksek hızlı yolları işlemciye ve yonga setine olabildiğince kısa tutmaktır.',
   },
   'mb.power': {
-    title: 'Power & Storage Headers',
-    summary: '24-pin ATX power in, SATA data out.',
+    title: 'Güç ve Depolama Başlıkları',
+    summary: '24 pinlik ATX güç girişi, SATA veri çıkışı.',
     details:
-      'The tall 24-pin connector is the board’s main power feed from the PSU, carrying 12 V, 5 V and 3.3 V rails. The right-angle SATA ports nearby serve 2.5-inch drives and hard disks — older tech than NVMe, but still everywhere.',
+      'Uzun 24 pinlik konnektör, kartın güç kaynağından gelen ana beslemesidir; 12 V, 5 V ve 3,3 V hatlarını taşır. Yanındaki dik açılı SATA bağlantı noktaları 2,5 inç sürücülere ve sabit disklere hizmet eder — NVMe’den eski bir teknoloji, ama hâlâ her yerde.',
   },
   'mb.caps': {
-    title: 'Capacitors',
-    summary: 'Tiny energy reservoirs smoothing every voltage rail.',
+    title: 'Kondansatörler',
+    summary: 'Her gerilim hattını düzleştiren minik enerji depoları.',
     details:
-      'Solid polymer capacitors buffer the board’s power rails against microsecond-scale demand spikes. Their quality determines a motherboard’s lifespan — the “capacitor plague” of the early 2000s killed millions of boards and made solid caps the standard.',
+      'Katı polimer kondansatörler, kartın güç hatlarını mikrosaniye ölçeğindeki talep sıçramalarına karşı tamponlar. Kaliteleri anakartın ömrünü belirler — 2000’lerin başındaki "kondansatör vebası" milyonlarca kartı öldürdü ve katı kondansatörleri standart yaptı.',
   },
   'mb.battery': {
-    title: 'CMOS Battery',
-    summary: 'A coin cell that remembers time and settings when unplugged.',
+    title: 'CMOS Pili',
+    summary: 'Fiş çekiliyken saati ve ayarları hatırlayan düğme pil.',
     details:
-      'This CR2032 keeps the real-time clock ticking and preserves firmware settings while the PC is disconnected from power. It lasts years — and popping it out remains the classic way to reset a misbehaving BIOS.',
+      'Bu CR2032, bilgisayar elektrikten ayrıyken gerçek zamanlı saati işletir ve ürün yazılımı ayarlarını korur. Yıllarca dayanır — ve onu yerinden çıkarmak, huysuzlanan bir BIOS’u sıfırlamanın hâlâ klasik yoludur.',
   },
 };

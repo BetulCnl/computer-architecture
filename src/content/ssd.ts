@@ -2,39 +2,39 @@ import type { PartContent } from '@/content/cpu';
 
 export const ssdContent: Record<string, PartContent> = {
   'ssd.controller': {
-    title: 'NVMe Controller',
-    summary: 'A small processor that orchestrates every read and write.',
+    title: 'NVMe Denetçisi',
+    summary: 'Her okuma ve yazmayı yöneten küçük bir işlemci.',
     details:
-      'The controller is a dedicated multi-core chip: it maps logical addresses to physical NAND pages, spreads writes evenly (wear leveling), fixes bit errors on the fly, and talks to the CPU over PCIe using the NVMe protocol — designed for flash, with thousands of parallel command queues.',
+      'Denetçi, özel amaçlı çok çekirdekli bir yongadır: mantıksal adresleri fiziksel NAND sayfalarına eşler, yazmaları dengeli dağıtır (aşınma dengeleme), bit hatalarını anında düzeltir ve işlemciyle PCIe üzerinden NVMe protokolüyle konuşur — flash için tasarlanmış, binlerce paralel komut kuyruğuna sahip bir protokol.',
   },
   'ssd.nand': {
     title: 'NAND Flash',
-    summary: 'Where your data actually lives — stacked hundreds of layers high.',
+    summary: 'Verilerinizin gerçekten yaşadığı yer — yüzlerce katman yükseklikte.',
     details:
-      'NAND cells trap electrons on an insulated gate, so data persists without power. Modern 3D NAND stacks 200+ layers of cells vertically and stores multiple bits per cell. Each package here holds hundreds of billions of cells, erased and rewritten in blocks.',
+      'NAND hücreleri elektronları yalıtılmış bir kapıda hapseder; bu yüzden veri, güç olmadan da kalıcıdır. Modern 3D NAND, 200’den fazla hücre katmanını dikey olarak istifler ve hücre başına birden çok bit saklar. Buradaki her paket, bloklar halinde silinip yeniden yazılan yüz milyarlarca hücre içerir.',
   },
   'ssd.dram': {
-    title: 'DRAM Cache',
-    summary: 'Fast working memory for the drive’s address map.',
+    title: 'DRAM Önbelleği',
+    summary: 'Sürücünün adres haritası için hızlı çalışma belleği.',
     details:
-      'The controller keeps its logical-to-physical address map in this DRAM chip for instant lookups. Budget drives omit it (using host memory instead), which is one of the main real-world differences between cheap and premium NVMe drives under sustained load.',
+      'Denetçi, mantıksal-fiziksel adres haritasını anında erişim için bu DRAM yongasında tutar. Ucuz sürücüler bunu atlar (yerine ana sistemin belleğini kullanır) — sürekli yük altında ucuz ve üst düzey NVMe sürücüler arasındaki en gerçek farklardan biri budur.',
   },
   'ssd.smds': {
-    title: 'Passive Components',
-    summary: 'Capacitors and resistors that keep power and signals clean.',
+    title: 'Pasif Elemanlar',
+    summary: 'Gücü ve sinyalleri temiz tutan kondansatörler ve dirençler.',
     details:
-      'Dozens of tiny capacitors filter the 3.3 V supply during bursts of NAND activity, when current demand spikes sharply. Some enterprise drives add larger capacitors as emergency power, letting the controller flush in-flight data if power is suddenly lost.',
+      'Onlarca minik kondansatör, NAND etkinliğinin yoğunlaştığı ve akım talebinin sıçradığı anlarda 3,3 V beslemeyi süzer. Bazı kurumsal sürücüler acil güç kaynağı olarak daha büyük kondansatörler ekler: güç aniden kesilirse denetçi, yoldaki verileri güvenle yazabilir.',
   },
   'ssd.pcb': {
-    title: 'M.2 PCB',
-    summary: 'The 22 × 80 mm card that replaced whole 2.5-inch drives.',
+    title: 'M.2 PCB’si',
+    summary: 'Koca 2,5 inç sürücülerin yerini alan 22 × 80 mm’lik kart.',
     details:
-      'The “2280” in M.2 2280 is simply the size: 22 mm wide, 80 mm long. With no case, no cables and no moving parts, the entire drive is a handful of chips on one small board that mounts flat on the motherboard.',
+      'M.2 2280’deki "2280" yalnızca boyuttur: 22 mm genişlik, 80 mm uzunluk. Kasasız, kablosuz ve hareketli parçasız — sürücünün tamamı, anakarta düz yatan tek bir küçük kart üzerindeki bir avuç yongadır.',
   },
   'ssd.contacts': {
-    title: 'M.2 Edge Connector',
-    summary: 'A direct PCIe link to the CPU — no adapter chips in between.',
+    title: 'M.2 Kenar Konnektörü',
+    summary: 'İşlemciye doğrudan PCIe bağlantısı — arada dönüştürücü yonga yok.',
     details:
-      'These gold fingers carry four PCIe lanes straight to the processor. The notch position is the “key”: an M-key edge like this one signals PCIe ×4 NVMe. That direct connection is why NVMe drives are many times faster than SATA.',
+      'Bu altın parmaklar, dört PCIe şeridini doğrudan işlemciye taşır. Çentiğin konumu "anahtardır": bunun gibi bir M-key kenarı, PCIe ×4 NVMe anlamına gelir. NVMe sürücülerin SATA’dan kat kat hızlı olmasının nedeni bu doğrudan bağlantıdır.',
   },
 };

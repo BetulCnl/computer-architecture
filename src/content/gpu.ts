@@ -2,63 +2,63 @@ import type { PartContent } from '@/content/cpu';
 
 export const gpuContent: Record<string, PartContent> = {
   'gpu.die': {
-    title: 'GPU Die',
-    summary: 'Thousands of small cores built for massively parallel math.',
+    title: 'GPU Çekirdeği',
+    summary: 'Kütlesel paralel matematik için tasarlanmış binlerce küçük çekirdek.',
     details:
-      'Where a CPU has a handful of powerful cores, a GPU die packs thousands of simpler ones that all execute at once. Rendering a frame means running the same math on millions of pixels — exactly the kind of workload this architecture devours. The same parallelism now trains AI models.',
+      'İşlemcide bir avuç güçlü çekirdek varken, GPU çekirdeği aynı anda çalışan binlerce daha basit çekirdek barındırır. Bir kareyi çizmek, aynı matematiği milyonlarca piksele uygulamak demektir — bu mimarinin tam da beslendiği iş yükü. Aynı paralellik bugün yapay zekâ modellerini de eğitiyor.',
   },
   'gpu.vram': {
-    title: 'GDDR Memory',
-    summary: 'Ultra-wide, ultra-fast memory ringed around the die.',
+    title: 'GDDR Bellek',
+    summary: 'Çekirdeğin etrafını saran ultra geniş, ultra hızlı bellek.',
     details:
-      'Graphics memory trades latency for staggering bandwidth: textures and frame data stream over a bus hundreds of bits wide at terabytes per second. The chips encircle the die because at these speeds every millimeter of trace length matters.',
+      'Grafik belleği, gecikmeyi feda edip müthiş bant genişliği kazanır: dokular ve kare verileri, yüzlerce bit genişliğinde bir yol üzerinden saniyede terabaytlarca akar. Yongalar çekirdeği çevreler, çünkü bu hızlarda iletken yolun her milimetresi önemlidir.',
   },
   'gpu.vrm': {
-    title: 'Power Delivery (VRM)',
-    summary: 'Converts 12 V into hundreds of amps at ~1 V for the die.',
+    title: 'Güç Katı (VRM)',
+    summary: '12 V’u, çekirdek için ~1 V’ta yüzlerce ampere dönüştürür.',
     details:
-      'A modern GPU can draw 300+ watts at around one volt — that is hundreds of amps. The VRM splits this load across many phases, each with a choke (the metal cubes) and capacitors, switching millions of times per second to keep the voltage rock-stable under wild load swings.',
+      'Modern bir GPU yaklaşık bir voltta 300+ watt çekebilir — bu yüzlerce amper demektir. VRM bu yükü çok sayıda faza böler; her fazda bir bobin (metal küpler) ve kondansatörler bulunur. Saniyede milyonlarca kez anahtarlama yaparak gerilimi, vahşi yük dalgalanmalarında bile sarsılmaz tutar.',
   },
   'gpu.heatsink': {
-    title: 'Heatsink Fins',
-    summary: 'A dense aluminum radiator hidden under the shroud.',
+    title: 'Soğutucu Kanatçıklar',
+    summary: 'Kaportanın altına gizlenmiş yoğun bir alüminyum radyatör.',
     details:
-      'Heat from the die and memory is spread through a vapor chamber or heatpipes into this fin array. The fins convert a small, intensely hot spot into a large, mildly warm surface that airflow can actually cool.',
+      'Çekirdeğin ve belleğin ısısı, bir buhar odası ya da ısı borularıyla bu kanatçık dizisine yayılır. Kanatçıklar, küçük ve aşırı sıcak bir noktayı, hava akımının gerçekten soğutabileceği geniş ve ılık bir yüzeye dönüştürür.',
   },
   'gpu.fans': {
-    title: 'Axial Fans',
-    summary: 'Push air through the fins and out of the card.',
+    title: 'Eksenel Fanlar',
+    summary: 'Havayı kanatçıkların arasından geçirip karttan dışarı atar.',
     details:
-      'The fans force air between the heatsink fins and exhaust it through the card. Most modern cards stop the fans entirely at idle for silence, and some alternate fan spin directions to reduce turbulence between adjacent blades.',
+      'Fanlar havayı soğutucu kanatçıklarının arasına zorlar ve karttan dışarı üfler. Modern kartların çoğu boştayken sessizlik için fanları tamamen durdurur; bazıları komşu kanatlar arasındaki türbülansı azaltmak için fanları zıt yönlerde döndürür.',
   },
   'gpu.shroud': {
-    title: 'Cooler Shroud',
-    summary: 'Channels airflow — and defines the card’s look.',
+    title: 'Fan Kaportası',
+    summary: 'Hava akışını yönlendirir — ve kartın görünümünü belirler.',
     details:
-      'The plastic shroud ducts the fans’ airflow through the fins instead of letting it spill sideways. It is also the card’s face: industrial design, lighting and branding live here, wrapped around what is essentially a big radiator.',
+      'Plastik kaporta, fanların havasını yanlardan kaçmak yerine kanatçıkların arasından geçmeye zorlar. Aynı zamanda kartın yüzüdür: endüstriyel tasarım, aydınlatma ve marka kimliği, özünde büyük bir radyatör olan bu yapının etrafına sarılır.',
   },
   'gpu.pcb': {
-    title: 'Graphics PCB',
-    summary: 'A dense multi-layer board — a computer within your computer.',
+    title: 'Grafik Kartı PCB’si',
+    summary: 'Yoğun, çok katmanlı bir kart — bilgisayarınızın içindeki bilgisayar.',
     details:
-      'The GPU board carries its own processor, its own memory and its own power delivery: a complete computer that talks to the host over PCIe. High-end cards use 12+ copper layers to route thousands of high-speed connections in a palm-width space.',
+      'GPU kartı kendi işlemcisini, kendi belleğini ve kendi güç katını taşır: PCIe üzerinden ana sisteme bağlanan eksiksiz bir bilgisayar. Üst düzey kartlar, avuç genişliğinde bir alanda binlerce yüksek hızlı bağlantıyı yönlendirmek için 12+ bakır katman kullanır.',
   },
   'gpu.pcie': {
-    title: 'PCIe Connector',
-    summary: 'The ×16 slot link — the card’s data lifeline.',
+    title: 'PCIe Konnektörü',
+    summary: '×16 yuva bağlantısı — kartın veri can damarı.',
     details:
-      'Sixteen PCIe lanes connect the card to the CPU, moving tens of gigabytes per second. Commands, textures and compute data all cross this edge. The connector supplies 75 W too; anything beyond that arrives through the auxiliary power cables.',
+      'On altı PCIe şeridi kartı işlemciye bağlar ve saniyede onlarca gigabayt taşır. Komutlar, dokular ve hesap verileri — hepsi bu kenardan geçer. Konnektör ayrıca 75 W güç sağlar; fazlası yardımcı güç kablolarından gelir.',
   },
   'gpu.backplate': {
-    title: 'Backplate',
-    summary: 'Stiffens the card and sinks a little heat.',
+    title: 'Arka Plaka',
+    summary: 'Kartı sağlamlaştırır ve bir miktar ısı emer.',
     details:
-      'Heavy coolers can flex a long PCB over time, stressing solder joints. The metal backplate acts as a spine, often with thermal pads pulling warmth from the memory and VRM on the board’s rear face.',
+      'Ağır soğutucular uzun bir PCB’yi zamanla eğerek lehim noktalarını zorlayabilir. Metal arka plaka bir omurga görevi görür; çoğu zaman termal pedlerle kartın arka yüzündeki bellek ve VRM’den ısı da çeker.',
   },
   'gpu.bracket': {
-    title: 'I/O Bracket',
-    summary: 'Anchors the card to the case and exposes display outputs.',
+    title: 'G/Ç Braketi',
+    summary: 'Kartı kasaya sabitler ve görüntü çıkışlarını dışarı açar.',
     details:
-      'The bracket screws into the chassis, supporting the card’s weight and aligning its DisplayPort/HDMI outputs with the case cutout. On many cards it is also part of the exhaust path for warm air.',
+      'Braket kasaya vidalanır, kartın ağırlığını taşır ve DisplayPort/HDMI çıkışlarını kasa kesitine hizalar. Birçok kartta sıcak havanın dışarı atıldığı yolun da bir parçasıdır.',
   },
 };

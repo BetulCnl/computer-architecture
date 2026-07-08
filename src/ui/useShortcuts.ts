@@ -20,6 +20,8 @@ export function useShortcuts(): void {
       if (target && (target.tagName === 'INPUT' || target.tagName === 'SELECT')) return;
 
       const s = useApp.getState();
+      // ders okurken laboratuvar kısayolları devre dışı kalır
+      if (s.view !== 'lab') return;
       const inTour = s.tourIndex !== null;
 
       switch (event.key) {

@@ -15,7 +15,7 @@ export function InfoPanel() {
             type="button"
             className="info-close"
             onClick={clearSelection}
-            aria-label="Close panel"
+            aria-label="Paneli kapat"
           >
             ×
           </button>

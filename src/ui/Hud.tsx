@@ -6,12 +6,12 @@ import { useQuality } from '@/state/quality';
 import type { QualityTier } from '@/state/quality';
 
 const COMPONENTS: { id: ComponentId; label: string; title: string }[] = [
-  { id: 'cpu', label: 'CPU', title: 'Central Processing Unit' },
-  { id: 'gpu', label: 'GPU', title: 'Graphics Card' },
-  { id: 'ram', label: 'DDR5', title: 'DDR5 Memory Module' },
-  { id: 'ssd', label: 'SSD', title: 'NVMe Solid State Drive' },
-  { id: 'motherboard', label: 'Board', title: 'ATX Motherboard' },
-  { id: 'cooler', label: 'Cooler', title: 'Tower Air Cooler' },
+  { id: 'cpu', label: 'CPU', title: 'Merkezi İşlem Birimi' },
+  { id: 'gpu', label: 'GPU', title: 'Ekran Kartı' },
+  { id: 'ram', label: 'DDR5', title: 'DDR5 Bellek Modülü' },
+  { id: 'ssd', label: 'SSD', title: 'NVMe Katı Hal Sürücüsü' },
+  { id: 'motherboard', label: 'Anakart', title: 'ATX Anakart' },
+  { id: 'cooler', label: 'Soğutucu', title: 'Kule Tipi Hava Soğutucu' },
 ];
 
 /** 2D overlay: brand, component switcher, controls, info panel, tour. */
@@ -36,13 +36,15 @@ export function Hud() {
           <span className="brand-name">
             Pc<em>RL</em>
           </span>
-          <span className="brand-tag">Interactive Hardware Lab</span>
+          <span className="brand-tag">İnteraktif Donanım Laboratuvarı</span>
           {!inTour && (
-            <span className="hint">Drag to orbit · click a part · E explode · Space simulate</span>
+            <span className="hint">
+              Sürükleyerek döndür · parçaya tıkla · E patlat · Boşluk simülasyon
+            </span>
           )}
         </div>
         {!inTour && (
-          <nav className="switcher" aria-label="Component selector">
+          <nav className="switcher" aria-label="Bileşen seçici">
             {COMPONENTS.map((c) => (
               <button
                 key={c.id}
@@ -66,7 +68,7 @@ export function Hud() {
           <div className="panel controls-panel">
             <div className="control-group">
               <label className="control-label" htmlFor="explode">
-                Exploded view
+                Patlatılmış görünüm
               </label>
               <input
                 id="explode"
@@ -83,18 +85,18 @@ export function Hud() {
               type="button"
               className={`sim-btn${sim ? ' active' : ''}`}
               onClick={toggleSim}
-              title="Toggle process simulation (Space)"
+              title="Süreç simülasyonunu aç/kapat (Boşluk)"
             >
-              {sim ? '■ Stop' : '▶ Simulate'}
+              {sim ? '■ Durdur' : '▶ Simüle Et'}
             </button>
             <button type="button" className="tour-start-btn" onClick={startTour}>
-              ✦ Guided tour
+              ✦ Rehberli Tur
             </button>
           </div>
 
           <div className="panel quality">
             <label className="control-label" htmlFor="quality">
-              Quality {auto ? '(auto)' : ''}
+              Kalite {auto ? '(otomatik)' : ''}
             </label>
             <select
               id="quality"
@@ -105,11 +107,11 @@ export function Hud() {
                 else setTier(v as QualityTier);
               }}
             >
-              <option value="auto">Auto</option>
+              <option value="auto">Otomatik</option>
               <option value="ultra">Ultra</option>
-              <option value="high">High</option>
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
+              <option value="high">Yüksek</option>
+              <option value="medium">Orta</option>
+              <option value="low">Düşük</option>
             </select>
           </div>
         </div>
